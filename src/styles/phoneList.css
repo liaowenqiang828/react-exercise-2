@@ -1,0 +1,4 @@
+.phoneList {
+    display: flex;
+    justify-content: space-between;
+}

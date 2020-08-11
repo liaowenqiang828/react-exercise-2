@@ -2,9 +2,6 @@
     width: 560px;
     height: 300px;
 
-    display: flex;
-    flex-wrap: wrap;
+    display: inline-block;
     margin: 20px 0;
-
-    background-color: #dc3545;
 }

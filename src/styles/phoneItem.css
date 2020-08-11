@@ -1,0 +1,28 @@
+.phoneItem {
+    width: 160px;
+    height: 200px;
+}
+
+.phoneItem img {
+    width: 160px;
+    height: 160px;
+}
+.phoneItem h4 {
+    margin: 10px 0;
+}
+
+.phoneItem button {
+    height: 30px;
+    width: 100px;
+    background-color: #40a9ff;
+    text-align: center;
+    float: right;
+    margin-left: 8px;
+    border: none;
+}
+
+.phoneItemFooter {
+    display: inline-block;
+    margin-top: 10px;
+
+}
