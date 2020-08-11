@@ -1,0 +1,26 @@
+.header {
+    background-color: #096ee3;
+    height: 100px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+
+    position: relative;
+    top: 0;
+}
+
+.header img {
+    height: 25px;
+    width: 25px;
+}
+
+.header a {
+    position: absolute;
+    right: 30px;
+}
+
+.header h1 {
+    color: white;
+    position: absolute;
+    left: 30px;
+}
