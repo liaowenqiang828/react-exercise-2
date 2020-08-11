@@ -1,0 +1,10 @@
+.phoneBrand {
+    width: 560px;
+    height: 300px;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+
+    background-color: #dc3545;
+}
