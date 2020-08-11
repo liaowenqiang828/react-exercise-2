@@ -6,7 +6,7 @@ class Header extends Component {
         return (
             <div className="header">
                 <h1>Store</h1>
-                <a href="#">
+                <a href="www.baidu.com">
                     <img border="0" src="../assets/car.png"/>
                 </a>
             </div>
