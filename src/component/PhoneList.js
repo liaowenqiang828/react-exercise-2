@@ -45,8 +45,10 @@ class PhoneList extends Component {
                 <PhoneItem/>
                 <PhoneItem/>
                 <PhoneItem/>
+            {/*this.props.products.map((product) => {*/}
+            {/*    return <PhoneItem infomation={product}></PhoneItem>*/}
+            {/*})*/}
         </div>
-            // this.state.products.map(product => <PhoneItem infomation={product}>)
         );
     }
 }

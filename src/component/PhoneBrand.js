@@ -13,7 +13,7 @@ class PhoneBrand extends Component {
         return (
             <div className="phoneBrand">
                 <BrandName name={this.props.phone}/>
-                <PhoneList category={this.props.phone}/>
+                <PhoneList category={this.props.phone} products={this.props.products}/>
             </div>
         );
     }
