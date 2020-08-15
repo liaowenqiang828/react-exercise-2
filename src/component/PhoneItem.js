@@ -15,22 +15,15 @@ class PhoneItem extends Component {
     }
     render() {
         return (
-            // <div className="phoneItem">
-            //     <h4>{this.props.information.name}</h4>
-            //     <img src="../assets/product_image_placeholder.png"/>
-            //     <div className="phoneItemFooter">
-            //         <span>{this.props.information.price}</span>
-            //         <button>add to cart</button>
-            //     </div>
-            // </div>
             <div className="phoneItem">
-                <h4>{this.state.information.name}</h4>
-                <img src={phonePlaceHolder} alt={this.state.information.name}/>
+                <h4>{this.props.information.name}</h4>
+                <img src={phonePlaceHolder} alt="哎呀，图挂了"/>
                 <div className="phoneItemFooter">
-                    <span>{this.state.information.price}</span>
+                    <span>{this.props.information.price}</span>
                     <button>add to cart</button>
                 </div>
             </div>
+
         );
     }
 }
