@@ -15,7 +15,7 @@ class PhoneItem extends Component {
                 <img src={phonePlaceHolder} alt="哎呀，图挂了"/>
                 <div className="phoneItemFooter">
                     <span>{this.props.information.price}</span>
-                    <button>add to cart</button>
+                    <button onClick={this.props.onAddToCart}>add to cart</button>
                 </div>
             </div>
 

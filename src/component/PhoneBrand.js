@@ -13,7 +13,10 @@ class PhoneBrand extends Component {
         return (
             <div className="phoneBrand">
                 <BrandName name={this.props.category}/>
-                <PhoneList category={this.props.category} products={this.props.list}/>
+                <PhoneList category={this.props.category}
+                           products={this.props.list}
+                           onAddToCart={this.props.onAddToCart}
+                />
             </div>
         );
     }

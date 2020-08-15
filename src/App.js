@@ -7,14 +7,15 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            products: {}
+            products: {},
+            count: 0
         }
     }
     render() {
         return (
             <main className="app">
-                <Header/>
-                <Container products={this.state.products}/>
+                <Header count={this.state.count}/>
+                <Container products={this.state.products} onAddToCart={this.addToCart.bind(this)}/>
             </main>
         );
     }
@@ -56,6 +57,11 @@ class App extends Component {
         });
 
         return data;
+    }
+
+    addToCart() {
+        this.setState(
+            Object.assign({}, this.state, {count: this.state.count + 1,}));
     }
 
 }

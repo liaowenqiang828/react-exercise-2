@@ -24,3 +24,6 @@
     position: absolute;
     left: 30px;
 }
+.header span {
+    color: red;
+}

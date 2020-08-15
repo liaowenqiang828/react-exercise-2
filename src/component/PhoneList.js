@@ -11,7 +11,10 @@ class PhoneList extends Component {
     render() {
         return (<div className="phoneList">
             {this.props.products.map((product, index) => {
-                return <PhoneItem key={index} information={product}/>
+                return <PhoneItem key={index}
+                                  information={product}
+                                  onAddToCart={this.props.onAddToCart}
+                />
             })}
         </div>
         );

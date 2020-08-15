@@ -12,7 +12,11 @@ class Container extends Component {
         return (
             <div className="container">
                 {Object.keys(this.props.products).map(item => {
-                    return (<PhoneBrand key={item} category={item} list={this.props.products[item]}/>)
+                    return (<PhoneBrand key={item}
+                                        category={item}
+                                        list={this.props.products[item]}
+                                        onAddToCart={this.props.onAddToCart}
+                    />)
                 })}
             </div>
         );
