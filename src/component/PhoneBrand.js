@@ -12,8 +12,8 @@ class PhoneBrand extends Component {
     render() {
         return (
             <div className="phoneBrand">
-                <BrandName name={this.props.phone}/>
-                <PhoneList category={this.props.phone} products={this.props.products}/>
+                <BrandName name={this.props.category}/>
+                <PhoneList category={this.props.category} products={this.props.list}/>
             </div>
         );
     }

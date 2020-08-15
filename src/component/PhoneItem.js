@@ -6,11 +6,6 @@ class PhoneItem extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            information: {
-                "category": "iPhone",
-                "price": "￥5999",
-                "name": "iPhone11"
-            }
         }
     }
     render() {

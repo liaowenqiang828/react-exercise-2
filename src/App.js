@@ -3,32 +3,22 @@ import './App.scss';
 import Header from './component/Header';
 import Container from "./component/Container";
 
-function dataPreprocess(rawData) {
-    const data = {
-        iPhone: [],
-        HUAWEI: []
-    };
-    rawData.map(item => {
-        if (item.category === "iPhone") {
-            data.iPhone.push({
-                price: item.price,
-                name: item.name
-            })
-        } else if (item.category === "HUAWEI") {
-            data.HUAWEI.push({
-                price: item.price,
-                name: item.name
-            })
-        }
-    });
-    return data;
-}
-
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            products: {}
+        }
     }
+    render() {
+        return (
+            <main className="app">
+                <Header/>
+                <Container products={this.state.products}/>
+            </main>
+        );
+    }
+
     componentDidMount() {
         fetch("http://localhost:3000/products", {method: "GET"})
             .then((response) => {
@@ -36,25 +26,38 @@ class App extends Component {
                 return response.json()
             })
             .then((rawData) => {
-                console.log(rawData);
-                const data = dataPreprocess(rawData);
-                console.log(data);
+                const data = this.dataPreprocess(rawData);
                 this.setState({
                     products: data
                 })
+                console.log(this.state.products);
             }).catch((error) => {
                 throw new Error(error.message)
         })
     }
 
-    render() {
-    return (
-      <main className="app">
-        <Header/>
-        <Container products={this.state.products}/>
-      </main>
-    );
-  }
+    dataPreprocess(rawData) {
+        const data = {
+            iPhone: [],
+            HUAWEI: []
+        };
+        rawData.map(item => {
+            if (item.category === "iPhone") {
+                data.iPhone.push({
+                    price: item.price,
+                    name: item.name
+                })
+            } else if (item.category === "HUAWEI") {
+                data.HUAWEI.push({
+                    price: item.price,
+                    name: item.name
+                })
+            }
+        });
+
+        return data;
+    }
+
 }
 
 export default App;
